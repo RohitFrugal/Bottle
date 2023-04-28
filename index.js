@@ -25,16 +25,17 @@ function submitForm() {
 
   var monthname = monthNames[parseInt(month) - 1].substring(0, 3).toUpperCase();
   var reportID = day + "" + monthname + "" + year;
+  console.log(reportID)
   fetchReport(reportID);
 }
 
 const fetchReport = (reportID) => {
   axios
-    .get("https://github.com/rohitfrugal/bottle-report/" + reportID + "/")
+    .get("https://github.com/rohitfrugal/Bottle-Allure-Results" + reportID + "/")
     .then((response) => {
       console.log(response);
       window.open(
-        "https://github.com/rohitfrugal/bottle-report/" + reportID + "/"
+        "https://github.com/rohitfrugal/Bottle-Allure-Results" + reportID + "/"
       );
     })
     .catch((error) => {
