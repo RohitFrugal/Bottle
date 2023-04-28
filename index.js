@@ -31,11 +31,11 @@ function submitForm() {
 
 const fetchReport = (reportID) => {
   axios
-    .get("https://github.com/rohitfrugal/Bottle-Allure-Results/" + reportID + "/")
+    .get("https://rohitfrugal.github.io/Bottle-Allure-Results/" + reportID + "/")
     .then((response) => {
       console.log(response);
       window.open(
-        "https://github.com/rohitfrugal/Bottle-Allure-Results/" + reportID + "/"
+        "https://rohitfrugal.github.io/Bottle-Allure-Results/" + reportID + "/"
       );
     })
     .catch((error) => {
